@@ -53,7 +53,7 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+            <state line="28" column="41" selection-start="847" selection-end="847" vertical-scroll-proportion="0.8181818" vertical-offset="0" max-vertical-offset="666">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="app.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="1278">
+            <state line="8" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="16.185184" vertical-offset="581" max-vertical-offset="1278">
               <folding />
             </state>
           </provider>
@@ -317,13 +317,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db_create.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="17" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
@@ -340,14 +333,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="-5.3333335" vertical-offset="0" max-vertical-offset="1278">
+        <state line="8" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="16.185184" vertical-offset="581" max-vertical-offset="1278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="616">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+        <state line="28" column="41" selection-start="847" selection-end="847" vertical-scroll-proportion="0.8181818" vertical-offset="0" max-vertical-offset="666">
           <folding />
         </state>
       </provider>
