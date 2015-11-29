@@ -6,6 +6,7 @@ from functools import wraps
 from collections import OrderedDict
 import aiml
 import base64
+import json
 from flask.ext.bcrypt import Bcrypt
 # create the application object
 app = Flask(__name__)
@@ -84,12 +85,15 @@ def aichat():
 
 @app.route('/update_address',methods=['POST','GET'])
 def update_address():
-    email=request.values['email']
-    newaddress=request.values['naddress']
+
+    content=json.loads(request.get_json())
+
+    aadhaar=content['aadhaar']
+    newaddress=content['naddress']
     user=db.session.query(User).filter(User.email==email).all()
     user[0].address=newaddress
     db.session.commit()
-    return jsonify({"message":"Successfully Updated","status": 200})
+    return jsonify({"message":"Successfully Updated","flag":"0","status": 200})
 
 if __name__ == '__main__':
     app.run( port=7000)
