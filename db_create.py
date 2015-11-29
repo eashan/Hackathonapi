@@ -6,7 +6,7 @@ from models import User
 db.create_all()
 
 #demo insert statements
-db.session.add(User("eashan","kadam","aadhaar123","eashankadam@gmail.com","pass"))
+db.session.add(User("eashan","kadam","aadhaar123","12,Sampada Building, Bhagatlane, Matunga Mumbai 400016","eashankadam@gmail.com","pass"))
 
 
 #commit changes
