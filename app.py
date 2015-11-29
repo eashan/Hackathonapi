@@ -59,20 +59,35 @@ def register():
     else:
         return jsonify({"message": "Please provide all the information", "status": 401}), 401
 
-@app.route('/upload_docs',methods=['POST','GET'])
+@app.route('/upload_docs/signature',methods=['POST','GET'])
 def upload():
-    signature=request.values['signature']
-    profilepic=request.values['profilepic']
-    email=request.values['email']
-    user=db.session.query(User).filter(User.email==email).all()
+    docs=json.loads(request.get_json())
+    signature=str(docs['signature'])
+    aadhaar=str(docs['aadhaar'])
+    user=db.session.query(User).filter(User.aadhaar==aadhaar).all()
     s=open("Doc/Sig"+str(user[0].id)+".jpg","w")
     s.write(base64.decodestring(signature))
     s.close()
-    p=open("Doc/DP"+str(user[0].id)+".jpg","w")
-    p.write(base64.decodestring(profilepic))
-    p.close()
 
-    db.session.add(Documents(user[0].id,"Doc/Sig"+str(user[0].id)+".jpg","Doc/DP"+str(user[0].id)+".jpg"))
+
+    db.session.add(Documents(user[0].id,"Doc/Sig"+str(user[0].id)+".jpg","0"))
+    db.session.commit()
+    return jsonify({"message":"Successfully Uploded","status": 200})
+
+
+@app.route('/upload_docs/profilepic',methods=['POST','GET'])
+def upload():
+    docs=json.loads(request.get_json())
+
+    profilepic=str(docs['profilepic'])
+    aadhaar=str(docs['aadhaar'])
+    user=db.session.query(User).filter(User.email==email).all()
+    s=open("Doc/Sig"+str(user[0].id)+".jpg","w")
+    s.write(base64.decodestring(profilepic))
+    s.close()
+
+
+    db.session.add(Documents(user[0].id," ","Doc/DP"+str(user[0].id)+".jpg"))
     db.session.commit()
     return jsonify({"message":"Successfully Uploded","status": 200})
 
@@ -80,7 +95,8 @@ def upload():
 def aichat():
     kernel=aiml.Kernel()
     kernel.learn("basic_chat.xml")
-    Query=request.values['Query']
+    Q=json.loads(request.get_json())
+    Query=str(Q['Query'])
     return jsonify({"Answer":kernel.respond(Query.upper()),"status":200})
 
 @app.route('/update_address',methods=['POST','GET'])
@@ -88,8 +104,8 @@ def update_address():
 
     content=json.loads(request.get_json())
 
-    aadhaar=content['aadhaar']
-    newaddress=content['naddress']
+    aadhaar=str(content['aadhaar'])
+    newaddress=str(content['naddress'])
     user=db.session.query(User).filter(User.email==email).all()
     user[0].address=newaddress
     db.session.commit()
