@@ -2,38 +2,58 @@
 <category>
         <pattern>HELLO</pattern>
         <template>
-            Well, hello!
+            Well, hello! I am Captain KYC who is available 24*7 for you. I am here to answer any queries you might have about the KYC process. Feel free to ask me anything.
         </template>
     </category>
     
     <category>
         <pattern>WHAT ARE YOU</pattern>
         <template>
-            I'm a KYC Assistant
+            I'm Captian KYC - an automated smart KYC Assistant
         </template>
     </category>
     <category>
         <pattern>WHO ARE YOU *</pattern>
         <template>
-            I'm a your KYC Assistant
+            I'm a KYC Assistant
         </template>
     </category>
     <category>
         <pattern>WHY *</pattern>
         <template>
-            I'm a your KYC Assistant
+            I'm a KYC Assistant
         </template>
     </category>
 <category>
-        <pattern>WHAT IS KYC ?</pattern>
+        <pattern>WHAT IS KYC</pattern>
         <template>
-		KYC is for authentication of Users in order to validate their credentials , and enable smooth interaction with the banking services, The documents required for KYC are specified by RBI , and Banks need to Follow the norms specified by RBI. In order to ease this process KnowYC provides a truely Online Customer On Boarding Experience without hassles. 
+		KYC is for the authentication of users in order to validate their credentials, and enable smooth interaction with the banking services, The documents required for KYC are specified by RBI, and Banks need to follow the norms specified by RBI. In order to ease this process KnowYC provides a truely Online Customer On Boarding Experience without hassles. 
         </template>
     </category>
 <category>
-        <pattern>WHAT IS KYC ?</pattern>
+        <pattern>TELL ME MORE ABOUT KYC</pattern>
         <template>
-		KYC is for authentication of Users in order to validate their credentials , and enable smooth interaction with the banking services, The documents required for KYC are specified by RBI , and Banks need to Follow the norms specified by RBI. In order to ease this process KnowYC provides a truely Online Customer On Boarding Experience without hassles. 
+		KYC is for the authentication of users in order to validate their credentials, and enable smooth interaction with the banking services, The documents required for KYC are specified by RBI, and Banks need to follow the norms specified by RBI. In order to ease this process KnowYC provides a truely Online Customer On Boarding Experience without hassles. 
+        </template>
+    </category>
+<category>
+        <pattern>WHAT IS A VALID ADDRESS PROOF</pattern>
+        <template>
+		There are 6 documents listed as valid address proof, they are as follows:
+		Aadhaar Card, Pan Card, Voter's ID Card, Drivers License, Nrega Card, and Passport
+        </template>
+    </category>
+<category>
+        <pattern>WHAT ARE VALID ADDRESS PROOFS</pattern>
+        <template>
+		There are 6 documents listed as valid address proof, they are as follows:
+		Aadhaar Card, Pan Card, Voter's ID Card, Drivers License, Nrega Card, and Passport
+        </template>
+    </category>
+<category>
+        <pattern>HOW DOES KNOWYC WORK</pattern>
+        <template>
+		KnowYC has integrated the Aadhaar Api, for User Identification and Authentication, also we have integrated a Document Verification System using Image Processing, to validate Documents to provide a truely digital and on-the-go experience.
         </template>
     </category>
 </aiml>

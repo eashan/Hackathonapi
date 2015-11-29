@@ -9,25 +9,25 @@ class User(db.Model):
     __tablename__ = "User"
 
     id = db.Column(db.Integer, primary_key=True)
-    fname = db.Column(db.String(200), nullable=False)
-    lname = db.Column(db.String(200),nullable=False)
-
+    name = db.Column(db.String(200), nullable=False)
+    phno=db.Column(db.String(20),nullable=False)
     aadhaar = db.Column(db.String(20),nullable=True)
     address = db.Column(db.String(400),nullable=True)
     email = db.Column(db.String(200), unique=True, nullable=False)
-    password = db.Column(db.String(54), nullable=False)
+    YOB=db.Column(db.String(20),nullable=True)
     documents=relationship("Documents",backref="User")
 
-    def __init__(self, f1name , l1name , aadhaar ,address, email, password):
-        self.fname = f1name
-        self.lname = l1name
+    def __init__(self, name, aadhaar ,phno, YOB, address, email):
+        self.name= name
         self.aadhaar = aadhaar
         self.address = address
+        self.phno = phno
+        self.YOB= YOB
         self.email = email
-        self.password = password
+
 
     def __repr__(self):
-        return '<name {} >'.format(self.fname)
+        return '<name {} >'.format(self.name)
 
 class Documents(db.Model):
 

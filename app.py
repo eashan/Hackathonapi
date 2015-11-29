@@ -35,12 +35,12 @@ from models import *
 @app.route('/register', methods=['POST','GET'])
 def register():
     if 'name' in request.values and 'email' in request.values and 'password' in request.values:
-        fname = request.values['fame']
-        lname = request.values['lname']
+        name = request.values['name']
+        phno = request.values['phno']
         aadhaar=request.values['aadhaar']
         address=request.values['address']
         email = request.values['email']
-        password = request.values['password']
+        YOB = request.values['YOB']
         if email == "" or password == "" or name == "":
             return jsonify({"message": "Please provide all the information", "status":401}), 401
         results = db.session.query(User).filter(User.email == email).all()
@@ -52,7 +52,7 @@ def register():
                 else:
                     return jsonify({"message": "Authentication error", "status": 401}), 401
         else:
-            db.session.add(User(fname,lname,aadhaar,address,email, password))
+            db.session.add(User(name, aadhaar ,phno, YOB, address, email))
             db.session.commit()
             return jsonify({"message": "User registration successful", "status": 200})
     else:
@@ -80,7 +80,7 @@ def aichat():
     kernel=aiml.Kernel()
     kernel.learn("basic_chat.xml")
     Query=request.values['Query']
-    return jsonify({"Answer":kernel.respond(Query),"status":200})
+    return jsonify({"Answer":kernel.respond(Query.upper()),"status":200})
 
 @app.route('/update_address',methods=['POST','GET'])
 def update_address():
@@ -92,4 +92,4 @@ def update_address():
     return jsonify({"message":"Successfully Updated","status": 200})
 
 if __name__ == '__main__':
-    app.run()
+    app.run( port=7000)
